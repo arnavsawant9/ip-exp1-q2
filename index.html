@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-shirt customizer</title>
+  </head>
+  <body>
+    <header>
+      <marquee>
+        <p>Get discounts upto 50% on your next purchase by downloading and making purchase by our app</p>
+      </marquee>
+    </header>
+    <h1>Customize the T-shirt in your own way!!</h1>
+    <form action="/t-shirt-order" method="post">
+      <fieldset>
+        <fieldset>
+          <legend>Order Details</legend>
+          <label for="tagline">Tagline on the Shirt:-</label>
+          <input
+            type="text"
+            id="tagline"
+            name="tagline"
+            placeholder="Enter your tagline"
+            required
+          />
+
+          <label for="color">Color:-</label>
+          <select>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="black">Black</option>
+            <option value="dark-blue">Dark-Blue</option>
+          </select>
+
+          <label for="size">Size:-</label>
+          <select>
+            <option value="extra-small">XS</option>
+            <option value="small">S</option>
+            <option value="medium">M</option>
+            <option value="large">L</option>
+            <option value="extra-large">XL</option>
+            <option value="x-extra-large">XXL</option>
+          </select>
+
+          <label for="quantity">Quantity:-</label>
+          <input type="number" id="quantity" name="quantity" min="1" required />
+
+          <label for="deliveryDate">Date of delivery:-</label>
+          <input type="date" id="deliveryDate" name="deliveryDate" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery Details</legend>
+          <label for="recipients-name">Recipient's Name:-</label>
+          <input
+            type="text"
+            id="recipients-name"
+            name="recipients-name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="address">Address:-</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="3"
+            placeholder="Enter your delivery address"
+            required
+          ></textarea>
+
+          <label for="email">Email:-</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+
+          <label for="phone">Phone Number:-</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            pattern="+[0-9]{2}-[0-9]{10}"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional details</legend>
+          <label for="additionalComments">Additional Comments:-</label>
+          <textarea
+            id="additionalComments"
+            name="additionalComments"
+            rows="4"
+            placeholder="Anything you want to add on your tshirt"
+          ></textarea>
+          <button type="submit">Place Order</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
